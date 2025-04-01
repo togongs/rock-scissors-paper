@@ -55,27 +55,12 @@ function App() {
         <Box title="You" item={userSelect} result={result} />
         <Box title="Computer" item={computerSelect} result={result} />
       </div>
-      <div className="rock-scissors-paper">
-        <img
-          width={58}
-          height={58}
-          onClick={() => play("rock")}
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1qf0Cx2RF1t8E2CvBv3rlLokMAPerExNukiYjzW6gauslKFMhClVdlqXVo7tCBATt898&usqp=CAU"
-        />
-        <img
-          width={50}
-          height={50}
-          onClick={() => play("scissors")}
-          src="https://blog.kakaocdn.net/dn/HfURw/btqXKvOTNWK/gWTwPXEg9QzSV0ilOuwuak/img.png"
-        />
-        <img
-          width={45}
-          height={45}
-          onClick={() => play("paper")}
-          src="https://blog.kakaocdn.net/dn/bmjB2s/btqXHhp6kpG/TH14W4U612SxKo9uuR2sB0/img.png"
-        />
+      <div className="btnContainer">
+        <button className="rock" onClick={() => play("rock")} />
+        <button className="scissors" onClick={() => play("scissors")} />
+        <button className="paper" onClick={() => play("paper")} />
       </div>
-      <h1>You {result}!</h1>
+      {result && <h1>You {result} !</h1>}
     </div>
   );
 }
